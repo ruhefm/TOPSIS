@@ -176,7 +176,7 @@ def topsis():
                 
 if __name__ == '__main__':
 #    port = int(os.environ.get('PORT', 9111))
-    app.secret_key = 'DPTE0909@#$'
+    app.secret_key = 'DPTE'
     app.run(host='0.0.0.0')
     #app.run(, debug=True)
     
