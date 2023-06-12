@@ -1,0 +1,31 @@
+<form action="{{ url_for('badan') }}" class='mt-3' method="POST">
+    <div class='row mx-auto'>
+    <select class="form-select my-3" name='gender' id='gender' aria-label="gender" required>
+        <option selected>Silakan pilih jenis kelamin</option>
+        <option value="1">Pria</option>
+        <option value="-1">Wanita</option>
+        </select>
+    <input
+    min="-250"
+    max="250"
+    name="height"
+    placeholder="Masukkan tinggi dalam cm"
+    type="number"
+    class="form-control"
+    id="height"
+    required>
+    
+    <button type='submit' class='my-3 btn btn-primary'>Cek!</button>
+    {%if result is defined%}
+    <div class="container-fluid result form-text bg-light p-3 my-3" style="text-align: justify">
+        Kamu tergolong <b>{{result[0]}}</b> dengan tinggi <b>{{result[1]}} cm</b>.
+        Menurut data, berat kamu harusnya
+        <b>{{result[2]}} kg</b>.
+        </div>
+        
+        {%endif%}
+
+    
+    
+</div>
+</form>
